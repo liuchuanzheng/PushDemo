@@ -63,6 +63,7 @@ public class MyApplication extends Application {
             public Notification getNotification(Context context, UMessage msg) {
                 Log.i(TAG,"收到友盟推送"+msg.getRaw().toString());
                 switch (msg.builder_id) {
+                    //这个id是后台填写的自定义样式
                     case 1:
                         Notification.Builder builder = new Notification.Builder(context);
                         RemoteViews myNotificationView = new RemoteViews(context.getPackageName(),
